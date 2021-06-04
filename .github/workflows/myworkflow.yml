@@ -17,10 +17,10 @@ jobs:
         uses: actions/checkout@v2
         if: ${{ always() }}
         with:
-          repository: vijejain/cicd-actions
+          repository: vijejain/cicd-actions-bugbash
           ref: refs/heads/main
           token: ${{ secrets.TOKEN }}   # Required for Private Beta
-          path: ./.github/vijejain/cicd-actions
+          path: ./.github/vijejain/cicd-actions-bugbash
 
       - name: Show what's inside the cicd-actions directory (debugging)
         run: |
