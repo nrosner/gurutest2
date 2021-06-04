@@ -24,7 +24,7 @@ jobs:
 
       - name: Show what's inside the cicd-actions directory (debugging)
         run: |
-          ls -l ./.github/vijejain/cicd-actions
+          ls -l ./.github/vijejain/cicd-actions-bugbash
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -42,7 +42,7 @@ jobs:
       - run: echo "Job status after building is ${{ job.status }}."
 
       - name: Analyze with CodeGuru Reviewer
-        uses: ./.github/vijejain/cicd-actions
+        uses: ./.github/vijejain/cicd-actions-bugbash
         if: ${{ always() }} 
         with:
           source_path: .     # Repository root
